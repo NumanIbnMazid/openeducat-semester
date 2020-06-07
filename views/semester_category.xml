@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='semester_category_action' model='ir.actions.act_window'>
+        <field name="name">Semester Categories</field>
+        <field name="res_model">op.semester.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_op_school_config_semester"
+                  name="Semester Management"
+                  parent="openeducat_core.menu_op_school_config"
+                  sequence="10"/>
+
+    <menuitem name="Semester Categories" id="semester_category_menu" parent="menu_op_school_config_semester" action="semester_category_action"/>
+
+    <!-- Form View -->
+    <record id="semester_category_view_form" model="ir.ui.view">
+        <field name="name">Semester Category Form</field>
+        <field name="model">op.semester.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="semester_category_view_tree" model="ir.ui.view">
+        <field name="name">Semester Category List</field>
+        <field name="model">op.semester.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="semester_category_view_search" model="ir.ui.view">
+        <field name="name">Semester Category Search</field>
+        <field name="model">op.semester.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

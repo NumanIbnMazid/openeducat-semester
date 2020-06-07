@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='semester_action' model='ir.actions.act_window'>
+        <field name="name">Semesters</field>
+        <field name="res_model">op.semester</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <menuitem name="Semester" id="semester_base_menu" /> -->
+    
+    <menuitem name="Semesters" id="semester_menu" parent="menu_op_school_config_semester" action="semester_action"/>
+
+    <!-- Form View -->
+    <record id="semester_view_form" model="ir.ui.view">
+        <field name="name">Semester Form</field>
+        <field name="model">op.semester</field>
+        <field name="arch" type="xml">
+            <form string="Semester">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="short_name"/>
+                        <field name="code"/>
+                    </group>
+                    <group>
+                        <field name="semester_category_id"/>
+                        <field name="credit"/>
+                        <field name="course_id"/>
+                        <field name="subject_ids" widget="many2many_tags"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="semester_view_tree" model="ir.ui.view">
+        <field name="name">Semester List</field>
+        <field name="model">op.semester</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="semester_category_id"/>
+                <field name="course_id"/>
+                <field name="subject_ids" widget="many2many_tags"/>
+                <!-- <group string="Subjects" name="subject">
+                    <field name="subject_ids" nolabel="1"/>
+                </group> -->
+                <field name="credit"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="semester_view_search" model="ir.ui.view">
+        <field name="name">Semester Search</field>
+        <field name="model">op.semester</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="course_id"/>
+                <field name="semester_category_id"/>
+                <field name="subject_ids"/>
+                <filter string="Without Courses" name="without_course" domain="[('course_id','=',False)]"/>
+                <filter string="Without Semester Category" name="without_semester_category" domain="[('semester_category_id','=',False)]"/>
+                <filter string="Without Subjects" name="without_subjects" domain="[('subject_ids','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

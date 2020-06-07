@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="course_new_tree_view" model="ir.ui.view">    
+        <field name="name">openeducat_core.op.course.tree.view</field>    
+        <field name="model">op.course</field>    
+        <field name="inherit_id" ref="openeducat_core.view_op_course_tree"/>    
+        <field name="arch" type="xml">            
+            <xpath expr="//field[@name='subject_ids']" position="after">                
+                <field name="semester_ids" widget="many2many_tags"/>
+            </xpath>    
+        </field>
+    </record>
+
+    <record id="course_new_form_view" model="ir.ui.view">    
+        <field name="name">openeducat_core.op.course.form.view</field>    
+        <field name="model">op.course</field>    
+        <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>    
+        <field name="arch" type="xml">        
+            <xpath expr="//field[@name='subject_ids']" position="after">            
+                <!-- <field name="semester_ids" widget="many2many_tags"/> -->
+                <!-- <group string="Semesters" name="semester_id">
+                    <field name="semester_ids" widget="many2many_tags"/>
+                </group>  -->
+                <group string="Semesters" name="semester">
+                    <field name="semester_ids" nolabel="1"/>
+                </group>
+            </xpath>    
+        </field>
+    </record>
+
+</odoo>

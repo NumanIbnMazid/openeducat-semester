@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Course Pre -->
+        <record id="op_course_cse" model="op.course">
+            <field name="name">BSc in Computer Science and Engineering</field>
+            <field name="code">CSE</field>
+            <field name="evaluation_type">GPA</field>
+        </record>
+        <!-- IT -->
+        <record id="op_course_it" model="op.course">
+            <field name="name">BSc in Information and Technology</field>
+            <field name="code">IT</field>
+            <field name="evaluation_type">GPA</field>
+        </record>
+        
+        <!-- Semester Category -->
+        <record id="op_semester_category_fall" model="op.semester.category">
+            <field name="name">Fall Semester</field>
+            <field name="description">Fall Semester Description</field>
+        </record>
+        <record id="op_semester_category_spring" model="op.semester.category">
+            <field name="name">Spring Semester</field>
+            <field name="description">Spring Semester Description</field>
+        </record>
+        <record id="op_semester_category_summer" model="op.semester.category">
+            <field name="name">Summer Semester</field>
+            <field name="description">Summer Semester Description</field>
+        </record>
+
+        <!-- Semester -->
+
+        <!-- Fall Semester -->
+        <record id="op_semester_category_fall_1" model="op.semester">
+            <field name="name">Semester 1</field>
+            <field name="semester_category_id" ref="op_semester_category_fall" />
+            <field name="short_name">Sem1-fall</field>
+            <field name="code">sem-fl-01</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_fall_2" model="op.semester">
+            <field name="name">Semester 2</field>
+            <field name="semester_category_id" ref="op_semester_category_fall" />
+            <field name="short_name">Sem2-fall</field>
+            <field name="code">sem-fl-02</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_fall_3" model="op.semester">
+            <field name="name">Semester 3</field>
+            <field name="semester_category_id" ref="op_semester_category_fall" />
+            <field name="short_name">Sem3-fall</field>
+            <field name="code">sem-fl-03</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_fall_4" model="op.semester">
+            <field name="name">Semester 4</field>
+            <field name="semester_category_id" ref="op_semester_category_fall" />
+            <field name="short_name">Sem4-fall</field>
+            <field name="code">sem-fl-04</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <!-- Spring Semester -->
+
+        <record id="op_semester_category_spring_1" model="op.semester">
+            <field name="name">Semester 1</field>
+            <field name="semester_category_id" ref="op_semester_category_spring" />
+            <field name="short_name">Sem1-spring</field>
+            <field name="code">sem-sp-01</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_spring_2" model="op.semester">
+            <field name="name">Semester 2</field>
+            <field name="semester_category_id" ref="op_semester_category_spring" />
+            <field name="short_name">Sem2-spring</field>
+            <field name="code">sem-sp-02</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_spring_3" model="op.semester">
+            <field name="name">Semester 3</field>
+            <field name="semester_category_id" ref="op_semester_category_spring" />
+            <field name="short_name">Sem3-spring</field>
+            <field name="code">sem-sp-03</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_spring_4" model="op.semester">
+            <field name="name">Semester 4</field>
+            <field name="semester_category_id" ref="op_semester_category_spring" />
+            <field name="short_name">Sem4-spring</field>
+            <field name="code">sem-sp-04</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <!-- Summer Semester -->
+
+        <record id="op_semester_category_summer_1" model="op.semester">
+            <field name="name">Semester 1</field>
+            <field name="semester_category_id" ref="op_semester_category_summer" />
+            <field name="short_name">Sem1-summer</field>
+            <field name="code">sem-sm-01</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_summer_2" model="op.semester">
+            <field name="name">Semester 2</field>
+            <field name="semester_category_id" ref="op_semester_category_summer" />
+            <field name="short_name">Sem2-summer</field>
+            <field name="code">sem-sm-02</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_summer_3" model="op.semester">
+            <field name="name">Semester 3</field>
+            <field name="semester_category_id" ref="op_semester_category_summer" />
+            <field name="short_name">Sem3-summer</field>
+            <field name="code">sem-sm-03</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <record id="op_semester_category_summer_4" model="op.semester">
+            <field name="name">Semester 4</field>
+            <field name="semester_category_id" ref="op_semester_category_summer" />
+            <field name="short_name">Sem4-summer</field>
+            <field name="code">sem-sm-04</field>
+            <field name="credit">4.0</field>
+            <field name="course_id" ref="op_course_cse" />
+        </record>
+
+        <!-- Course -->
+        <!-- CSE -->
+        <record id="openeducat_semester.op_course_cse" model="op.course">
+            <field name="name">BSc in Computer Science and Engineering</field>
+            <field name="code">CSE</field>
+            <field name="evaluation_type">GPA</field>
+            <field name="semester_ids"
+                    eval="[(6,0, [ref('op_semester_category_fall_1'), ref('op_semester_category_fall_2'), ref('op_semester_category_fall_3'), ref('op_semester_category_fall_4'),ref('op_semester_category_spring_1'), ref('op_semester_category_spring_2'), ref('op_semester_category_spring_3'), ref('op_semester_category_spring_4'),ref('op_semester_category_summer_1'), ref('op_semester_category_summer_2'), ref('op_semester_category_summer_3'), ref('op_semester_category_summer_4')])]"/>
+        </record>
+        <!-- IT -->
+        <record id="openeducat_semester.op_course_it" model="op.course">
+            <field name="name">BSc in Information and Technology</field>
+            <field name="code">IT</field>
+            <field name="evaluation_type">GPA</field>
+            <field name="semester_ids"
+                    eval="[(6,0, [ref('op_semester_category_fall_1'), ref('op_semester_category_fall_2'), ref('op_semester_category_fall_3'), ref('op_semester_category_fall_4'),ref('op_semester_category_spring_1'), ref('op_semester_category_spring_2'), ref('op_semester_category_spring_3'), ref('op_semester_category_spring_4'),ref('op_semester_category_summer_1'), ref('op_semester_category_summer_2'), ref('op_semester_category_summer_3'), ref('op_semester_category_summer_4')])]"/>
+        </record>
+    </data>
+</odoo>

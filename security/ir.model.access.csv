@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_semester,op.semester_default,model_op_semester,,1,0,0,0
+acl_semester_op_faculty,op.semester_op_faculty,model_op_semester,group_op_faculty,1,1,1,1
+acl_semester_category,op.semester_category_default,model_op_semester_category,,1,0,0,0
+acl_semester_category_op_faculty,op.semester_category_op_faculty,model_op_semester_category,group_op_faculty,1,1,1,1

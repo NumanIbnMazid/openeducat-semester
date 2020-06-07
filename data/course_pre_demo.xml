@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Course -->
+    <!-- CSE -->
+    <record id="op_course_cse" model="op.course">
+        <field name="name">BSc in Computer Science and Engineering</field>
+        <field name="code">CSE</field>
+        <field name="evaluation_type">GPA</field>
+    </record>
+    <!-- IT -->
+    <record id="op_course_it" model="op.course">
+        <field name="name">BSc in Information and Technology</field>
+        <field name="code">IT</field>
+        <field name="evaluation_type">GPA</field>
+    </record>
+</odoo>

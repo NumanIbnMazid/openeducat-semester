@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Semester Category -->
+        <record id="op_semester_category_fall" model="op.semester.category">
+            <field name="name">Fall Semester</field>
+            <field name="description">Fall Semester Description</field>
+        </record>
+        <record id="op_semester_category_spring" model="op.semester.category">
+            <field name="name">Spring Semester</field>
+            <field name="description">Spring Semester Description</field>
+        </record>
+        <record id="op_semester_category_summer" model="op.semester.category">
+            <field name="name">Summer Semester</field>
+            <field name="description">Summer Semester Description</field>
+        </record>
+    </data>
+</odoo>

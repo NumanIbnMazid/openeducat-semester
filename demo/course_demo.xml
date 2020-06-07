@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Course -->
+        <!-- CSE -->
+        <record id="op_course_cse" model="op.course">
+            <field name="name">BSc in Computer Science and Engineering</field>
+            <field name="code">CSE</field>
+            <field name="evaluation_type">GPA</field>
+            <field name="fees_term_id" ref='openeducat_fees.op_fees_term_3' />
+            <!-- <field name="semester_ids"
+                    eval="[(6,0, [ref('op_semester_category_fall_1'), ref('op_semester_category_fall_2'), ref('op_semester_category_fall_3'), ref('op_semester_category_fall_4'),ref('op_semester_category_spring_1'), ref('op_semester_category_spring_2'), ref('op_semester_category_spring_3'), ref('op_semester_category_spring_4'),ref('op_semester_category_summer_1'), ref('op_semester_category_summer_2'), ref('op_semester_category_summer_3'), ref('op_semester_category_summer_4')])]"/> -->
+        </record>
+        <!-- IT -->
+        <record id="op_course_it" model="op.course">
+            <field name="name">BSc in Information and Technology</field>
+            <field name="code">IT</field>
+            <field name="evaluation_type">GPA</field>
+            <field name="fees_term_id" ref='openeducat_fees.op_fees_term_3' />
+            <!-- <field name="semester_ids"
+                    eval="[(6,0, [ref('op_semester_category_fall_1'), ref('op_semester_category_fall_2'), ref('op_semester_category_fall_3'), ref('op_semester_category_fall_4'),ref('op_semester_category_spring_1'), ref('op_semester_category_spring_2'), ref('op_semester_category_spring_3'), ref('op_semester_category_spring_4'),ref('op_semester_category_summer_1'), ref('op_semester_category_summer_2'), ref('op_semester_category_summer_3'), ref('op_semester_category_summer_4')])]"/> -->
+        </record>
+
+    </data>
+</odoo>
